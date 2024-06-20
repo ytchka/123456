@@ -1,5 +1,6 @@
 // test.cpp
 #include "class.h"
+#include "A.h"
 #include <gtest/gtest.h>
 
 TEST(SingletonTest, InstanceEquality) {
