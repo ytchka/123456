@@ -9,7 +9,7 @@ enable_testing()
 add_executable(MyProject main.cpp A.cpp)
 
 # Добавляем файлы с тестами
-add_executable(MyProjectTests test.cpp)
+add_executable(MyProjectTests test.cpp A.cpp)
 
 # Добавляем тесты
 # Убедитесь, что у вас есть правильные пути к функциям тестирования
