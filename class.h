@@ -2,8 +2,11 @@
 #pragma once
 
 class A {
+private:
+    A(); // Объявление приватного конструктора
+
 public:
-    A(); // Объявление конструктора
-    static A* getInstance();
+    static A* getInstance(); // Статический метод в публичной секции
+
     // Другие методы и поля класса A
 };
