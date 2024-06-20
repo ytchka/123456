@@ -12,7 +12,7 @@ add_executable(MyProject main.cpp A.cpp)
 find_package(GTest REQUIRED)
 
 # Добавляем файлы с тестами
-add_executable(MyProjectTests test.cpp)
+add_executable(MyProjectTests test.cpp A.cpp)
 
 # Линкуем с gtest
 target_link_libraries(MyProjectTests GTest::GTest GTest::Main)
