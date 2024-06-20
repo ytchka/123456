@@ -1,10 +1,9 @@
+// class.h
 #pragma once
 
 class A {
 public:
+    A(); // Объявление конструктора
     static A* getInstance();
-
-private:
-    A();
-    static A* instance;
+    // Другие методы и поля класса A
 };
