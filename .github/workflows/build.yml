@@ -17,8 +17,14 @@ jobs:
     - name: Set up CMake
       uses: actions/setup-cmake@v2
 
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y build-essential
+        # Установите дополнительные зависимости, если это необходимо
+
     - name: Build
-      run: cmake --build .
+      run: cmake --build . --config Release
 
     - name: Test
       run: ctest --verbose
