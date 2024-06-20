@@ -1,4 +1,10 @@
 // A.cpp
-#include "A.h"
+#include "class.h"
 
-// Здесь должны быть другие определения методов класса A, если они есть
+A* A::getInstance() {
+    // Реализация синглтона
+    static A instance;
+    return &instance;
+}
+
+// Остальная реализация класса A
