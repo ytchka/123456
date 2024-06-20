@@ -1,19 +1,15 @@
+// test.cpp
 #include "class.h"
-#include <iostream>
+#include <gtest/gtest.h>
 
-void test_singleton() {
-    std::cout << "Running test_singleton..." << std::endl;
+TEST(SingletonTest, InstanceEquality) {
     A* pa1 = A::getInstance();
     A* pa2 = A::getInstance();
 
-    if (pa1 == pa2) {
-        std::cout << "Test passed: Singleton instance is the same." << std::endl;
-    } else {
-        std::cout << "Test failed: Singleton instance is different." << std::endl;
-    }
+    ASSERT_EQ(pa1, pa2);
 }
 
-int main() {
-    test_singleton();
-    return 0;
+int main(int argc, char** argv) {
+    ::testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
 }
