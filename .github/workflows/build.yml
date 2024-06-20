@@ -14,12 +14,9 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Clean build directory
-      run: rm -rf build && sudo apt install -y libgtest-dev
-
     - name: Set up CMake
       uses: jwlawson/actions-setup-cmake@v2
-      
+
     - name: Generate build files
       run: cmake -B build -S . -DCMAKE_BUILD_TYPE=Release
 
@@ -27,5 +24,4 @@ jobs:
       run: cmake --build build --config Release
 
     - name: Test
-      run: ctest --verbose
-      working-directory: _build
+      run: ctest --verbose --test-dir build
