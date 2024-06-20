@@ -18,7 +18,7 @@ jobs:
       run: rm -rf build
 
     - name: Set up CMake
-     uses: jwlawson/actions-setup-cmake@v2
+      uses: jwlawson/actions-setup-cmake@v2
 
     - name: Generate build files
       run: cmake -B build -S . -DCMAKE_BUILD_TYPE=Release
